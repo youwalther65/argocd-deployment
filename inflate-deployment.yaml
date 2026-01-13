@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: inflate-argocd
+  name: inflate-argocd-public
   namespace: default
 spec:
   progressDeadlineSeconds: 600
