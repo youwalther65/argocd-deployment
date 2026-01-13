@@ -9,7 +9,7 @@ spec:
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      app: inflate-argocd
+      app: inflate-argocd-public-repo
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -18,12 +18,12 @@ spec:
   template:
     metadata:
       labels:
-        app: inflate-argocd
+        app: inflate-argocd-public-repo
     spec:
       containers:
       - image: public.ecr.aws/eks-distro/kubernetes/pause:3.7
         imagePullPolicy: IfNotPresent
-        name: inflate-argocd
+        name: inflate-argocd-public-repo
         resources:
           requests:
             cpu: "1"
